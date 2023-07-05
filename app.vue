@@ -6,7 +6,22 @@
     >
         Open
     </button>
-    <BottomSheet :show="show" @close="show = false" />
+    <BottomSheet :show="show" @close="show = false">
+        <div class="flex pt-3 pb-9 justify-center gap-x-[104px]">
+            <div class="flex flex-col items-center cursor-pointer">
+                <button type="button">
+                    <img src="/images/icon-camera.svg" alt="" />
+                </button>
+                <span class="text-sm text-gray-500 mt-2">카메라</span>
+            </div>
+            <div class="flex flex-col items-center cursor-pointer">
+                <button type="button">
+                    <img src="/images/icon-gallery.svg" alt="" />
+                </button>
+                <span class="text-sm text-gray-500 mt-2">갤러리</span>
+            </div>
+        </div>
+    </BottomSheet>
 </template>
 
 <script setup>
