@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { useEventListener, useRafFn } from "@vueuse/core";
+import { useScrollLock, useEventListener } from "@vueuse/core";
 const props = defineProps({
     show: {
         type: Boolean,
@@ -51,6 +51,8 @@ const props = defineProps({
 });
 
 const emits = defineEmits(["close"]);
+
+const isLock = ref(null);
 
 const $container = ref();
 const $sheet = ref();
@@ -118,6 +120,18 @@ function animateElement() {
         requestAnimationFrame(animateElement);
     }
 }
+
+watch(props, (to, from) => {
+    if (isLock.value === null) {
+        return;
+    }
+
+    isLock.value.value = to.show;
+});
+
+onMounted(() => {
+    isLock.value = useScrollLock(document.body);
+});
 </script>
 
 <style lang="scss">
