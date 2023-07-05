@@ -13,7 +13,7 @@
                 @click="handleClose"
             ></div>
             <div
-                class="bottom-sheet-main z-[300] bg-white absolute w-full"
+                class="bottom-sheet-main z-[300] bg-white absolute w-full max-w-[400px]"
                 :style="`--bottom-sheet-height: -${
                     $sheet?.offsetHeight ?? 0
                 }px; --bottom-sheet-interval: ${movePoint * -1}px;`"
