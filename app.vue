@@ -63,7 +63,7 @@ onMounted(() => {
     const $div = document.createElement("div");
     $div.classList.add("full-modal");
 
-    document.body.appendChild($div);
+    window.parent.document.body.appendChild($div);
 
     setTimeout(() => {
         console.log("콘솔");
