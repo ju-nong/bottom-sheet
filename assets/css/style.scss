@@ -18,3 +18,14 @@ body {
     background-color: #e4fff3;
     user-select: none;
 }
+
+.full-modal {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+
+    z-index: 999999;
+}
