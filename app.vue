@@ -52,27 +52,10 @@
             라이브러리 왜 씀?
         </div>
     </BottomSheet>
-
-    <!-- <div class="full-modal"></div> -->
 </template>
 
 <script setup>
 const show = ref(false);
-
-onMounted(() => {
-    const $div = document.createElement("div");
-    $div.classList.add("full-modal");
-
-    window.parent.document.body.appendChild($div);
-
-    setTimeout(() => {
-        console.log("콘솔");
-    }, 1000);
-
-    setTimeout(() => {
-        alert("알림");
-    }, 2000);
-});
 </script>
 
 <style lang="scss">
